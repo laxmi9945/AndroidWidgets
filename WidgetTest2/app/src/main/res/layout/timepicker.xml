@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yp">
+    <TimePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/timepicker"
+       >
+    </TimePicker>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timepicker"
+        android:id="@+id/timetv"
+        android:layout_marginTop="50dp"
+        android:textColor="#ff00"
+        android:textStyle="italic"
+        android:hint="Time will display here"
+        android:textAlignment="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timepicker"
+        android:layout_marginTop="130dp"
+        android:text="Time picker Ex"
+        android:textAlignment="center"
+        android:textColor="#ff00"
+        android:textStyle="bold"
+        android:onClick="timepicker"/>
+</RelativeLayout>

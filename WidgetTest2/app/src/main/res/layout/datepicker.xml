@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/yp">
+    <DatePicker
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/dtpkr"
+        android:onClick="Datepicker">
+    </DatePicker>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dtpkr"
+        android:id="@+id/dtid"
+        android:text="Date will display here:"
+        android:textAlignment="center"
+        android:textColor="#ff00"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dtpkr"
+        android:text="Date Picker Ex"
+        android:textStyle="bold"
+        android:textColor="#ff00"
+        android:id="@+id/dttv"
+        android:layout_marginTop="50dp"
+        android:textAlignment="center"/>
+
+</RelativeLayout>
