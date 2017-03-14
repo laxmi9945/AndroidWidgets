@@ -30,5 +30,5 @@
         android:text="MySplashApp"
         android:id="@+id/wp"
         android:background="#ff0"
-        android:onClick="whatsapp"/>
+        android:onClick="Explicit"/>
 </LinearLayout>

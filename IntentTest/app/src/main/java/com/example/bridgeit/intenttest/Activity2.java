@@ -26,7 +26,7 @@ public class Activity2 extends AppCompatActivity
         startActivity(intent);
 
     }
-    public void whatsapp(View view){
+    public void Explicit(View view){
         Intent intent=getPackageManager().getLaunchIntentForPackage("com.example.bridgeit.splashscreentest");
         startActivity(intent);
     }
