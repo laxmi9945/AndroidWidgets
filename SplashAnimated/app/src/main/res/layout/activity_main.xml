@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/dead"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        />
+    <TextView
+        android:id="@+id/scrollTxt"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="8dp"
+        android:ellipsize="marquee"
+        android:textStyle="italic"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:freezesText="true"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:scrollHorizontally="true"
+        android:singleLine="true"
+        android:text="Dont mess wid Young tallents... "
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+
+
+
+</RelativeLayout>
