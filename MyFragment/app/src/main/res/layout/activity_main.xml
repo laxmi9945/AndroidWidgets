@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+       >
+        <Button
+        android:layout_width="0dp"
+            android:layout_weight="0.25"
+            android:background="#ce8817"
+            android:id="@+id/btn1"
+        android:layout_height="match_parent"
+        android:text="frag1"
+            android:onClick="FragOne"
+             />
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:layout_height="match_parent"
+        android:text="frag2"
+        android:id="@+id/btn2"
+        android:background="#ff0"
+        android:onClick="FragTwo"
+         />
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:background="#ff00"
+        android:id="@+id/btn3"
+        android:layout_height="match_parent"
+        android:text="Frag3"
+        android:onClick="FragThree"
+
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="0.25"
+        android:layout_height="match_parent"
+        android:text="frag4"
+        android:onClick="FragFour"
+        android:id="@+id/btn4"
+        android:background="#35b307"
+        />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8">
+        <!--<android.support.v4.app.FragmentTabHost
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/fragment">
+
+        </android.support.v4.app.FragmentTabHost>-->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/frame">
+
+        </FrameLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="Fragment Test"
+        android:textStyle="italic"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30dp"
+        android:textAlignment="center"
+        android:background="@color/colorAccent"/>
+
+
+</LinearLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/android"
+        android:title="Android"
+        android:icon="@drawable/androidlogo"
+        app:showAsAction="ifRoom"/>
+    <item android:id="@+id/ios"
+        android:title="IOS"
+        android:icon="@drawable/ios"/>
+    <item android:id="@+id/angular"
+        android:title="Angular"
+        android:icon="@drawable/angu"/>
+    <item android:id="@+id/mean"
+        android:title="Mean"
+        android:icon="@drawable/mean"/>
+    <item android:id="@+id/aws"
+        android:title="AWS"
+        android:icon="@drawable/aws"/>
+
+</menu>
