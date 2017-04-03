@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatEditText;
-import android.support.v7.widget.AppCompatImageView;
+import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.View;
 import android.widget.Toast;
@@ -28,11 +28,9 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
     Matcher matcher,matcher2;
     String EMAIL_PATTERN = "[a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
     String Password_Pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9]).{5,12}$";
-    //Password matching expression. Match all alphanumeric character and predefined wild characters.
-    // Password must consists of at least 8 characters and not more than 15 characters.
     AppCompatEditText editTextEmail,editTextPassword;
     AppCompatButton loginButton;
-    AppCompatImageView fbimageView,googleimageView;
+    AppCompatImageButton fbimageButton,googleimageButton;
     AppCompatTextView createAccountTextview,forgotTextview;
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -49,8 +47,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         createAccountTextview=(AppCompatTextView)findViewById(R.id.createAccount_Textview);
         forgotTextview=(AppCompatTextView)findViewById(R.id.forgot_textview);
         loginButton=(AppCompatButton)findViewById(R.id.login_button);
-        fbimageView=(AppCompatImageView)findViewById(R.id.fb);
-        googleimageView=(AppCompatImageView)findViewById(R.id.google);
+        fbimageButton=(AppCompatImageButton)findViewById(R.id.fb_button);
+        googleimageButton=(AppCompatImageButton)findViewById(R.id.google_button);
         setClicklistener();
     }
 
@@ -59,8 +57,8 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
         forgotTextview.setOnClickListener(this);
         createAccountTextview.setOnClickListener(this);
         loginButton.setOnClickListener(this);
-        fbimageView.setOnClickListener(this);
-        googleimageView.setOnClickListener(this);
+        fbimageButton.setOnClickListener(this);
+        googleimageButton.setOnClickListener(this);
     }
 
     @Override
@@ -83,7 +81,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
                 SharedPreferences sharedPreferences=getSharedPreferences(Constants.keys, Context.MODE_PRIVATE);
                 String email=sharedPreferences.getString("email",Constants.values);
                 String password=sharedPreferences.getString("password",Constants.values);
-                pattern=Pattern.compile(EMAIL_PATTERN);
+                pattern= Pattern.compile(EMAIL_PATTERN);
                 matcher=pattern.matcher(editTextEmail.getText().toString());
 
                 pattern2=Pattern.compile(Password_Pattern);
@@ -117,7 +115,7 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
                 if(editTextEmail.getText().toString().equalsIgnoreCase(email) && editTextPassword.getText().toString().equals(password+"")) {
                     Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
-                    Intent intent1 = new Intent(this, WelComeActivity.class);
+                    Intent intent1 = new Intent(this, TodoItemsActivity.class);
                     startActivity(intent1);
                 }
                 else {
@@ -125,16 +123,14 @@ public class LoginActivity extends BaseActivity implements View.OnClickListener 
 
                 }
                 break;
-            case R.id.fb:
+            case R.id.fb_button:
+                Toast.makeText(this, "Not working", Toast.LENGTH_SHORT).show();
                 break;
 
-            case R.id.google:
+            case R.id.google_button:
+                Toast.makeText(this, "Not working", Toast.LENGTH_SHORT).show();
                 break;
         }
-        /* private boolean isValidEmail(String email) {
-         return android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches();
-     }
- */
 
         }
 
